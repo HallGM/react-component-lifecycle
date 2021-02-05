@@ -1,13 +1,85 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 800px;
+  font-family: merriweather, serif;
+  font-size: 14px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.title-box {
+  display: flex;
+  cursor: pointer;
+  background-color: #f76c6c;
+  padding: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.method {
+  background-color: #f8e9a1;
+  margin: auto;
+  max-width: 500px;
+  border: 1px solid black;
+}
+
+.arrow {
+  color: #24305e;
+  width: 10px;
+  margin: auto;
+  font-size: 30px;
+}
+
+.cycle {
+  width: auto;
+  background-color: #a8d0e6;
+  padding: 20px 10px 20px 10px;
+  margin: 20px 0 20px 0;
+}
+
+.cycle-box {
+  max-width: 600px;
+  margin: auto;
+}
+
+.centered {
+  display: block;
+  text-align: center;
+}
+
+.method-description {
+  padding: 5px 10px 5px 10px;
+}
+
+.non-arrow-spacing {
+  margin: 20px 0 20px 0;
+}
+
+.commit-box {
+  padding: 10px 0 10px 0;
+}
+
+.deprecated {
+  background-color: green;
+}
+
+pre {
+  white-space: pre-wrap;
 }
