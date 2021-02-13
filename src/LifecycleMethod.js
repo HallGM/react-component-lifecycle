@@ -6,6 +6,8 @@ import "./index.css";
 class LifecycleMethod extends React.Component {
   state = {
     displayInfo: false,
+    displayDeprecated: true,
+    displayUncommon: true,
   };
 
   clickHandler = (e) => {
@@ -18,15 +20,8 @@ class LifecycleMethod extends React.Component {
 
   render() {
     // props and state we are using
-    let {
-      title,
-      children,
-      deprecated = false,
-      displayDeprecated,
-      uncommon = false,
-      displayUncommon,
-    } = this.props;
-    let { displayInfo } = this.state;
+    let { title, deprecated, uncommon, content } = this.props;
+    let { displayInfo, displayDeprecated, displayUncommon } = this.state;
 
     // don't do anything else if displayDeprecated is false
     if (deprecated && !displayDeprecated) {
@@ -39,16 +34,17 @@ class LifecycleMethod extends React.Component {
     }
 
     //works out whether or not it should display the component information
-    let childrenDisplay = (display, children) => {
+    let methodDescription = (display, content) => {
       if (display) {
-        return <div className="method-description">{children}</div>;
+        return <div className="method-description">{content}</div>;
       }
     };
-
     return (
       <div className="method">
         <h3
-          className={`title-box ${deprecated && "deprecated"}`}
+          className={`title-box ${deprecated && "deprecated"} ${
+            uncommon && "uncommon"
+          } ${!displayInfo && "onclosed"}`}
           onClick={this.clickHandler}
         >
           <div className="icon">
@@ -56,9 +52,10 @@ class LifecycleMethod extends React.Component {
           </div>
           {" " + title}
         </h3>
-        {childrenDisplay(displayInfo, children)}
+        {methodDescription(displayInfo, content)}
       </div>
     );
   }
 }
+
 export default LifecycleMethod;
