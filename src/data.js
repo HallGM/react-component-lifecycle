@@ -59,7 +59,7 @@ const constructor = {
       <p>Also:</p>
       <ul>
         <li>
-          If you use the property initializer, state will already by set by the
+          If you use the property initializer, state will already be set by the
           time the constructor executes
         </li>
         <li>
