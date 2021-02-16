@@ -1,6 +1,6 @@
 # React Component Lifecycle
 
-[Go to App](https://hallgm.github.io/react-component-lifecycle/)
+>>>>[Go to App](https://hallgm.github.io/react-component-lifecycle/)<<<<
 
 This is an app for learning about React component lifecycle methods. It contains an interactive diagram to help you visualize the different lifecycle methods used in React components.
 
